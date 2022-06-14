@@ -22,12 +22,14 @@ var Mod4Tests = []Mod4Test{
 
 func Test04(t *testing.T) {
 
+	secret := true
 	for i, st := range Mod4Tests {
 		v := strings.ToLower(problems.Mod4(st.in))
 		if v != st.out {
 			if i < 3 { //３つ目まではオープンケースとして誤りを通知
-				t.Errorf("Expected Answer:%d, Your Answer:%d. \nGiven Argument is %d", st.out, v, st.in)
-			} else {
+				t.Errorf("Expected Answer:%s, Your Answer:%s. \nGiven Argument is %d", st.out, v, st.in)
+				secret = false
+			} else if secret {
 				t.Errorf("Secret Case Failed")
 			}
 		}

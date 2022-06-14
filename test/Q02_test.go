@@ -21,12 +21,14 @@ var MaxTests = []MaxTest{
 
 func Test02(t *testing.T) {
 
+	secret := true
 	for i, st := range MaxTests {
 		v := problems.Max(st.in1, st.in2, st.in3)
 		if v != st.out {
 			if i < 3 { //３つ目まではオープンケースとして誤りを通知
 				t.Errorf("Expected Answer:%d, Your Answer:%d. \nGiven Argument is %d , %d and %d", st.out, v, st.in1, st.in2, st.in3)
-			} else {
+				secret = false
+			} else if secret {
 				t.Errorf("Secret Case Failed")
 			}
 		}

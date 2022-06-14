@@ -1,5 +1,5 @@
 package problems
 
-func String(s, t string) string {
+func StringConcat(s, t string) string {
 	return ""
 }

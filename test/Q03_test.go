@@ -21,12 +21,14 @@ var SquareSumTests = []SquareSumTest{
 
 func Test03(t *testing.T) {
 
+	secret := true
 	for i, st := range SquareSumTests {
 		v := problems.SquareSum(st.in)
 		if v != st.out {
 			if i < 3 { //３つ目まではオープンケースとして誤りを通知
 				t.Errorf("Expected Answer:%d, Your Answer:%d. \nGiven Argument is %d", st.out, v, st.in)
-			} else {
+				secret = false
+			} else if secret {
 				t.Errorf("Secret Case Failed")
 			}
 		}

@@ -2,7 +2,6 @@ package problems
 
 import (
 	problems "problems/question"
-	"strings"
 	"testing"
 )
 
@@ -23,12 +22,14 @@ var StringTests = []StringTest{
 
 func Test05(t *testing.T) {
 
+	secret := true
 	for i, st := range StringTests {
-		v := strings.ToLower(problems.String(st.in1, st.in2))
+		v := problems.StringConcat(st.in1, st.in2)
 		if v != st.out {
 			if i < 3 { //３つ目まではオープンケースとして誤りを通知
 				t.Errorf("Expected Answer:%s, Your Answer:%s. \nGiven Argument is %s and %s", st.out, v, st.in1, st.in2)
-			} else {
+				secret = false
+			} else if secret {
 				t.Errorf("Secret Case Failed")
 			}
 		}
