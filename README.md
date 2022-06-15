@@ -120,7 +120,7 @@ s:=strconv.Itoa(i)とすればよい。
 | 30 | FizzBuzz |
 
 ### Q08.FizzBuzz問題
-正の整数nを受け取り、1からnまでの値をQ.06で実装したFizzBuzz関数に入力した結果の値を空白区切りで順に標準出力に表示する関数を実装せよ。
+正の整数nを受け取り、1からnまでの値を順にQ.06で実装した関数FizzBuzzSingleに入力した結果を空白区切りで標準出力に表示する関数FizzBuzzを実装せよ。
 <details><summary>ヒント</summary><div>
 Q.06のFizzBuzzSingle関数を利用すれば簡単。<br>
 標準出力への出力には、Q00.goの関数Helloで使ったfmt.Printf関数を利用する、ただし、Q00.goにならってfmtのimportを行うこと。
