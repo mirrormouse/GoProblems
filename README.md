@@ -123,7 +123,7 @@ s:=strconv.Itoa(i)
 | 12 | Fizz |
 | 30 | FizzBuzz |
 
-### Q08.FizzBuzz問題
+### Q.08 FizzBuzz問題
 正の整数nを受け取り、1からnまでの値を順にQ.06で実装した関数FizzBuzzSingleに入力した結果を空白区切りで標準出力に表示する関数FizzBuzzを実装せよ。
 <details><summary>ヒント</summary><div>
 Q.06のFizzBuzzSingle関数を利用すれば簡単。<br>
@@ -134,7 +134,7 @@ Q.06のFizzBuzzSingle関数を利用すれば簡単。<br>
 | ---- | ---- |
 | 15 | 1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz |
 
-### Q09.FizzBuzz応用１
+### Q.09 FizzBuzz応用１
 正の整数n,a,bを受け取り、1からnまでの値i ($1\leq i\leq n$) について、iがa×bの倍数ならFizzBuzz,a×bの倍数以外でaの倍数ならFizz、aの倍数以外でbの倍数ならBuzz、それ以外ならiを文字列に変換したものを空白区切りで順に標準出力に表示する関数FizzBuzz2を実装せよ。
 
 | 入力例 | 出力例 |
