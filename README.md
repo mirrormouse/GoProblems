@@ -108,11 +108,12 @@ func Hello() {
 ### Q.07 シンプルなFizzBuzz
 正の整数nを受け取り、nが3の倍数でかつ15の倍数ではないなら"Fizz"、nが5の倍数でかつ15の倍数でないなら"Buzz"、nが15の倍数なら"FizzBuzz"、それ以外なら整数nを文字列に変換したものを出力として返す関数FizzBuzzSingleを実装せよ。
 <details><summary>ヒント</summary><div>
-数値xを文字列に変換したいときは、"strconv"をimportしたうえで
+数値xを文字列に変換したいときは、"strconv"をimportしたうえで以下のように書く。
 
 ```Go
-s:=strconv.Itoa(i)とすればよい。
+s:=strconv.Itoa(i)
 ```
+
 解答用ファイルの最初に"strconv"をimportする文がコメントアウトされているので、"/*"と"*/"を削除してimportする文を有効化すること。
 </div></details>
 
