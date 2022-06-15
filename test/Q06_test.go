@@ -6,31 +6,31 @@ import (
 )
 
 // 入力と期待出力を定義
-type FizzBuzz1Test struct {
+type PowTest struct {
 	in1 int
-	out string
+	in2 int
+	out int
 }
 
 // 入力と期待出力の一覧
-var FizzBuzz1Tests = []FizzBuzz1Test{
-	FizzBuzz1Test{7, "7"},
-	FizzBuzz1Test{12, "Fizz"},
-	FizzBuzz1Test{20, "Buzz"},
-	FizzBuzz1Test{30, "FizzBuzz"},
-	FizzBuzz1Test{59, "59"},
-	FizzBuzz1Test{63, "Fizz"},
-	FizzBuzz1Test{65, "Buzz"},
-	FizzBuzz1Test{75, "FizzBuzz"},
+var PowTests = []PowTest{
+	PowTest{2, 3, 8},
+	PowTest{2, 0, 1},
+	PowTest{-3, 3, -27},
+	PowTest{-5, 4, 625},
+	PowTest{-7, 0, 1},
+	PowTest{-1, 13, -1},
+	PowTest{0, 20, 0},
 }
 
 func Test06(t *testing.T) {
 
 	secret := true
-	for i, st := range FizzBuzz1Tests {
-		v := problems.FizzBuzzSingle(st.in1)
+	for i, st := range PowTests {
+		v := problems.Mypow(st.in1, st.in2)
 		if v != st.out {
-			if i < 4 { //３つ目まではオープンケースとして誤りを通知
-				t.Errorf("Expected Answer:%s, Your Answer:%s. \nGiven Argument is %d", st.out, v, st.in1)
+			if i < 3 { //３つ目まではオープンケースとして誤りを通知
+				t.Errorf("Expected Answer:%d, Your Answer:%d. \nGiven Argument is %d and %d", st.out, v, st.in1, st.in2)
 				secret = false
 			} else if secret {
 				t.Errorf("Secret Case Failed")
