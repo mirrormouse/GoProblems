@@ -1,5 +1,5 @@
 package problems
 
-func Fact(n int) int {
+func Arraysum(s [5]int) int {
 	return 0
 }

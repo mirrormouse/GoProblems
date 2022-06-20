@@ -1,5 +1,5 @@
 package problems
 
-func Fact(n int) int {
+func Fib(n int) int {
 	return 0
 }
