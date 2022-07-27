@@ -13,9 +13,10 @@ type evensplitTest struct {
 
 // 入力と期待出力の一覧
 var evensplitTests = []evensplitTest{
-	evensplitTest{[]int{3, 2, 4}, []int{3, 2, 4}},
-	evensplitTest{[]int{0, -2, 5, 8}, []int{3, 2, 4}},
-	evensplitTest{[]int{2, 2, 2, 2, 2}, []int{3, 2, 4}},
+	evensplitTest{[]int{3, 2, 4}, []int{3, 1, 1, 2, 2}},
+	evensplitTest{[]int{0, -2, 5, 8}, []int{0, 0, -1, -1, 5, 4, 4}},
+	evensplitTest{[]int{2, 2, 2, 2, 2}, []int{1, 1, 1, 1, 1, 1, 1, 1, 1, 1}},
+	evensplitTest{[]int{1, 2, 3, -12, 0}, []int{1, 1, 1, 3, -6, -6, 0, 0}},
 }
 
 func Test15(t *testing.T) {

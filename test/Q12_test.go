@@ -2,6 +2,7 @@ package problems
 
 import (
 	problems "problems/question"
+	"strconv"
 	"testing"
 )
 
@@ -16,12 +17,13 @@ var arraysumTests = []arraysumTest{
 	arraysumTest{[5]int{3, 2, 4, 0, 0}, 9},
 	arraysumTest{[5]int{0, -2, 5, 8, 0}, 11},
 	arraysumTest{[5]int{2, 2, 2, 2, 2}, 10},
+	arraysumTest{[5]int{1, 2, 3, -10, 0}, -4},
 }
 
 func array5tostring(s [5]int) string {
 	t := "["
 	for i := 0; i < 5; i++ {
-		t += string(s[i])
+		t += strconv.Itoa(s[i])
 		if i > 0 {
 			t += ","
 		}
@@ -37,7 +39,7 @@ func Test12(t *testing.T) {
 		v := problems.Arraysum(st.in1)
 		if v != st.out {
 			if i < 3 { //３つ目まではオープンケースとして誤りを通知
-				t.Errorf("Expected Answer:%d, Your Answer:%d. \nGiven Argument is ", st.out, v, array5tostring(st.in1))
+				t.Errorf("Expected Answer:%d, Your Answer:%d. \nGiven Argument is %s", st.out, v, array5tostring(st.in1))
 
 				secret = false
 			} else if secret {

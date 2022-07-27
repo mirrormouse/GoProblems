@@ -2,6 +2,6 @@ package problems
 
 import "fmt"
 
-func FizzBuzz(n int) {
+func Nabeatsu(n int) {
 	fmt.Printf("")
 }

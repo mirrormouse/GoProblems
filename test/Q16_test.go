@@ -13,9 +13,10 @@ type BoardgameTest struct {
 
 // 入力と期待出力の一覧
 var BoardgameTests = []BoardgameTest{
-	BoardgameTest{[][]string{{"A"}, {"O"}, {"B"}}, 0},
-	BoardgameTest{[][]string{{"A"}, {"O"}, {"B"}}, 0},
-	BoardgameTest{[][]string{{"A"}, {"O"}, {"B"}}, 0},
+	BoardgameTest{[][]string{{"A", "B", "O"}, {"O", "A", "A"}, {"B", "O", "O"}}, 1},
+	BoardgameTest{[][]string{{"A", "B", "B", "A"}, {"O", "A", "A", "B"}, {"B", "B", "O", "A"}, {"B", "O", "O", "O"}}, -1},
+	BoardgameTest{[][]string{{"O", "B", "B", "A", "A"}, {"O", "O", "A", "B", "O"}, {"B", "O", "O", "A", "A"}, {"B", "B", "O", "O", "B"}, {"O", "A", "A", "O", "O"}}, 0},
+	BoardgameTest{[][]string{{"O", "B", "B", "B", "B"}, {"O", "O", "B", "B", "O"}, {"A", "O", "O", "A", "A"}, {"B", "B", "O", "O", "B"}, {"O", "A", "A", "O", "O"}}, -4},
 }
 
 func Test16(t *testing.T) {

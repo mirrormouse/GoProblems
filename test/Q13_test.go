@@ -13,9 +13,10 @@ type arraysquareTest struct {
 
 // 入力と期待出力の一覧
 var arraysquareTests = []arraysquareTest{
-	arraysquareTest{[]int{3, 2, 4}, []int{3, 2, 4}},
-	arraysquareTest{[]int{0, -2, 5, 8}, []int{3, 2, 4}},
-	arraysquareTest{[]int{2, 2, 2, 2, 2}, []int{3, 2, 4}},
+	arraysquareTest{[]int{3, 2, 4}, []int{9, 4, 16}},
+	arraysquareTest{[]int{0, -2, 5, 8}, []int{0, 4, 25, 64}},
+	arraysquareTest{[]int{2, 2, 2, 2, 2}, []int{4, 4, 4, 4, 4}},
+	arraysquareTest{[]int{1, 2, 3, -10}, []int{1, 4, 9, 100}},
 }
 
 func Test13(t *testing.T) {
